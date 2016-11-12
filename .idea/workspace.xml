@@ -2,18 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8f955e7-393e-4e40-8492-1c82cd109948" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insight_testsuite/temp/src/Parser.class" afterPath="$PROJECT_DIR$/insight_testsuite/temp/src/Parser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insight_testsuite/temp/src/User.class" afterPath="$PROJECT_DIR$/insight_testsuite/temp/src/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insight_testsuite/temp/src/antifraud.class" afterPath="$PROJECT_DIR$/insight_testsuite/temp/src/antifraud.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Parser.class" afterPath="$PROJECT_DIR$/src/Parser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/User.class" afterPath="$PROJECT_DIR$/src/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/antifraud.class" afterPath="$PROJECT_DIR$/src/antifraud.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insight_testsuite/results.txt" afterPath="$PROJECT_DIR$/insight_testsuite/results.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insight_testsuite/temp/run.sh" afterPath="$PROJECT_DIR$/insight_testsuite/temp/run.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insight_testsuite/temp/src/Parser.java" afterPath="$PROJECT_DIR$/insight_testsuite/temp/src/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insight_testsuite/temp/src/User.java" afterPath="$PROJECT_DIR$/insight_testsuite/temp/src/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insight_testsuite/temp/src/antifraud.java" afterPath="$PROJECT_DIR$/insight_testsuite/temp/src/antifraud.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insight_testsuite/tests/test-1-paymo-trans/paymo_output/output1.txt" afterPath="$PROJECT_DIR$/insight_testsuite/tests/test-1-paymo-trans/paymo_output/output1.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paymo_output/output1.txt" afterPath="$PROJECT_DIR$/paymo_output/output1.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paymo_output/output2.txt" afterPath="$PROJECT_DIR$/paymo_output/output2.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paymo_output/output3.txt" afterPath="$PROJECT_DIR$/paymo_output/output3.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.sh" afterPath="$PROJECT_DIR$/run.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Parser.java" afterPath="$PROJECT_DIR$/src/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/antifraud.java" afterPath="$PROJECT_DIR$/src/antifraud.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/User.java" afterPath="$PROJECT_DIR$/src/User.java" />
     </list>
     <ignored path="digital-wallet.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +53,8 @@
       <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="145" column="88" selection-start-line="145" selection-start-column="88" selection-end-line="145" selection-end-column="88" />
+            <state relative-caret-position="229">
+              <caret line="173" column="95" selection-start-line="173" selection-start-column="95" selection-end-line="173" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,15 +85,19 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            <state relative-caret-position="364">
+              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
               <folding>
-                <element signature="e#244#245#0" expanded="true" />
-                <element signature="e#269#270#0" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-                <element signature="e#357#358#0" expanded="true" />
-                <element signature="e#409#410#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#288#289#0" expanded="true" />
+                <element signature="e#313#314#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#453#454#0" expanded="true" />
+                <element signature="e#494#495#0" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#571#572#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#630#631#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,13 +119,13 @@
         <option value="$PROJECT_DIR$/src/parser.java" />
         <option value="$PROJECT_DIR$/paymo_input/batch_payment.txt" />
         <option value="$PROJECT_DIR$/paymo_output/output1.txt" />
-        <option value="$PROJECT_DIR$/src/User.java" />
         <option value="$PROJECT_DIR$/paymo_input/stream_payment.txt" />
         <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/paymo_output/output2.txt" />
         <option value="$PROJECT_DIR$/insight_testsuite/results.txt" />
         <option value="$PROJECT_DIR$/insight_testsuite/tests/test-1-paymo-trans/paymo_output/output1.txt" />
         <option value="$PROJECT_DIR$/src/antifraud.java" />
+        <option value="$PROJECT_DIR$/src/User.java" />
         <option value="$PROJECT_DIR$/src/Parser.java" />
       </list>
     </option>
@@ -714,21 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-          <folding>
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/paymo_output/output3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -809,14 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paymo_input/stream_payment.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/antifraud.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-191">
@@ -828,10 +813,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paymo_input/stream_payment.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="145" column="88" selection-start-line="145" selection-start-column="88" selection-end-line="145" selection-end-column="88" />
+        <state relative-caret-position="229">
+          <caret line="173" column="95" selection-start-line="173" selection-start-column="95" selection-end-line="173" selection-end-column="95" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

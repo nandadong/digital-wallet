@@ -8,11 +8,14 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.ArrayList;
+import java.util.Queue;
+import java.util.LinkedList;
 
 public class Parser {
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
     private BufferedWriter backupWriter;
+    private final int MAX_DEGREE = 4;
     // Parser constructor, used for feature 1 case
     public Parser(BufferedReader bufferedReader, BufferedWriter bufferedWriter) {
         this.bufferedReader = bufferedReader;
@@ -120,12 +123,9 @@ public class Parser {
                 User payer = map.get(id1);
 
                 ArrayList<Integer> adjacencyList = payer.getAdjacencyList();
-                // This HashSet is used for feature 3
-                HashSet<Integer> visited = new HashSet<Integer>();
-                visited.add(id1);
+
                 if (adjacencyList.contains(id2)) {
                     bufferedWriter.write("trusted");
-                    backupWriter.write("trusted");
                 }
                 else {
                     for (int adjacency : adjacencyList) {
@@ -134,49 +134,63 @@ public class Parser {
                         if (friendAdjacencyList.contains(id2)) {
                             bufferedWriter.write("trusted");
                             bufferedWriter.newLine();
-                            backupWriter.write("trusted");
-                            backupWriter.newLine();
                             continue outerloop;
-                        }
-                        // Feature 3
-                        // Feature 3 is to apply BFS to find if receiver is within 4th degree connection of payer
-                        // A HashSet is used to record visited users in the user map, avoid searching in infinite loops
-                        // Future work: If I have more time to work on this problem, I'll try to use a bi-directional BFS
-                        // to make the search more efficient, i.e. start BFS from the payer and receiver simultaneously,
-                        // and check if they have a same friend in the middle of network
-                        visited.add(adjacency);
-                        for (int friendAdjacency : friendAdjacencyList) {
-                            if (visited.contains(friendAdjacency)) {
-                                continue;
-                            }
-                            visited.add(friendAdjacency);
-                            User degree2Friend = map.get(friendAdjacency);
-                            ArrayList<Integer> degree3FriendList = degree2Friend.getAdjacencyList();
-                            if (degree3FriendList.contains(id2)) {
-                                backupWriter.write("trusted");
-                                backupWriter.newLine();
-                                continue outerloop;
-                            }
-                            // Dive into 3rd degree friends to find
-                            for (int degree3FriendId : degree3FriendList) {
-                                if (visited.contains(degree3FriendId)) {
-                                    continue;
-                                }
-                                visited.add(degree3FriendId);
-                                User degree3Friend = map.get(degree3FriendId);
-                                ArrayList<Integer> degree4FriendList = degree3Friend.getAdjacencyList();
-                                if (degree4FriendList.contains(id2)) {
-                                    backupWriter.write("trusted");
-                                    backupWriter.newLine();
-                                    continue outerloop;
-                                }
-                            }
                         }
                     }
                     bufferedWriter.write("unverified");
                 }
 
                 bufferedWriter.newLine();
+
+                // Feature 3
+                // Feature 3 is to apply BFS to find if receiver is within 4th degree connection of payer
+                // A HashSet is used to record visited users in the user map, avoid searching in infinite loops
+                // Future work: If I have more time to work on this problem, I'll try to use a bi-directional BFS
+                // to make the search more efficient, i.e. start BFS from the payer and receiver simultaneously,
+                // and check if they have a same friend in the middle of network
+                HashSet<Integer> visited = new HashSet<Integer>();
+                visited.add(id1);
+                Queue<Integer> queue = new LinkedList<Integer>();
+                queue.offer(id1);
+
+                while (!queue.isEmpty()) {
+                    int size = queue.size();
+                    for (int i = 0; i < size; i++) {
+                        int userId = queue.poll();
+                        // If current user id equals to id2, write result as "trusted"
+                        if (userId == id2) {
+                            backupWriter.write("trusted");
+                            backupWriter.newLine();
+                            continue outerloop;
+                        }
+                        User user = map.get(userId);
+                        int degree = user.getDegree();
+                        // If the degree of current user is 4, continue to check next user in the queue
+                        if (degree == MAX_DEGREE) {
+                            continue;
+                        }
+
+                        ArrayList<Integer> userAdjacencyList = user.getAdjacencyList();
+                        // If id2 is in current user's adjacencyList, write result as "trusted"
+                        if (userAdjacencyList.contains(id2)) {
+                            backupWriter.write("trusted");
+                            backupWriter.newLine();
+                            continue outerloop;
+                        }
+                        for (int userAdjacency : userAdjacencyList) {
+                            if (visited.contains(userAdjacency)) {
+                                continue;
+                            }
+                            User friend = map.get(userAdjacency);
+                            friend.setDegree(degree+1);
+                            map.put(userAdjacency, friend);
+                            queue.offer(userAdjacency);
+                            visited.add(userAdjacency);
+                        }
+                    }
+                }
+                // If id2 is not found through BFS within 4th degree, write result as "unverified"
+                backupWriter.write("unverified");
                 backupWriter.newLine();
             }
             bufferedReader.close();
